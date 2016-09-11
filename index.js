@@ -47,7 +47,9 @@ HtmlWebpackCdnPlugin.prototype.apply = function(compiler) {
 				if (module.chunks) {
 					var link_cfg_str = module._source.source().split("\n").shift()
 					link_cfg = JSON.parse(link_cfg_str.replace(/(^[\/\(]\*?)|([\*\)\/]{1,2}\/$)/g,''))
-					var link = [currentOpts.cdn[link_cfg.type], link_cfg.name, link_cfg.version, link_cfg.name + link_cfg.ext + "." + link_cfg.type].join('/')
+					
+					var link = [currentOpts.cdn[link_cfg.type], link_cfg.name.toLowerCase(), link_cfg.version, link_cfg.name.toLowerCase() + link_cfg.ext + "." + link_cfg.type].join('/')
+
 					module.chunks.forEach(function (chunk) {
 						if ( currentOpts.filter.length == 0 || currentOpts.filter.indexOf(chunk.name) == -1 || currentOpts.include.indexOf(chunk.name)) {
 							link_map[chunk.name] || (link_map[chunk.name] = [])
