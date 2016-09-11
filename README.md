@@ -49,8 +49,11 @@ var webpackConfig = {
 
 ``` javascript
 // index.js
-require("cdn?jQuery@3.1.0")
-require("cdn?normalize@4.2.0")
+var $ = require("cdn?jQuery@3.1.0")
+// Now you can use it
+$('.app')
+require("cdn?normalize@4.2.0&type=css")
+// cdn-loader
 // .......more code
 
 ```
