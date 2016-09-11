@@ -1,11 +1,16 @@
 {
   "name": "html-webpack-cdn-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "cdn in webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jso0/html-webpack-cdn-plugin.git"
+  },
+  "homepage": "https://github.com/jso0/html-webpack-cdn-plugin",
   "keywords": [
     "webpack-plugin",
     "html-webpack-plugin",
