@@ -1,0 +1,27 @@
+{
+  "name": "html-webpack-cdn-plugin",
+  "version": "0.1.2",
+  "description": "cdn in webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack-plugin",
+    "html-webpack-plugin",
+    "webpack",
+    "cdn-loader"
+  ],
+  "author": "jso0",
+  "license": "GPL",
+  "dependencies": {
+    "cdn-loader": "^0.1.1",
+    "html-webpack-plugin": "^2.22.0",
+    "loader-utils": "^0.2.15"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "^2.22.0"
+  }
+}
