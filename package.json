@@ -12,10 +12,11 @@
   },
   "homepage": "https://github.com/jso0/html-webpack-cdn-plugin",
   "keywords": [
+    "webpack",
+    "cdn-loader",
     "webpack-plugin",
     "html-webpack-plugin",
-    "webpack",
-    "cdn-loader"
+    "html-webpack-cdn-plugin"
   ],
   "author": "jso0",
   "license": "GPL",

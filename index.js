@@ -51,7 +51,6 @@ HtmlWebpackCdnPlugin.prototype.apply = function(compiler) {
 					module.chunks.forEach(function (chunk) {
 						if ( currentOpts.filter.length == 0 || currentOpts.filter.indexOf(chunk.name) == -1 || currentOpts.include.indexOf(chunk.name)) {
 							link_map[chunk.name] || (link_map[chunk.name] = [])
-							log(link_map[chunk.name],link)
 							link_map[chunk.name].push(link)
 						}
 					})
