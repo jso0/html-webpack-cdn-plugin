@@ -43,13 +43,13 @@ HtmlWebpackCdnPlugin.prototype.apply = function(compiler) {
   	var link_map = {}
 	compilation.plugin('optimize-tree', function (chunks, modules, callback) {
 		modules.forEach(function(module) {
-			if (module.build && module.rawRequest && /^cdn\?/.test(module.rawRequest) && typeof module.loaders == 'object') {
+			if (module.build && module.rawRequest && /^cdn-loader\?/.test(module.rawRequest) && typeof module.loaders == 'object') {
 				var link_cfg_str = module._source.source().split("\n").shift()
 				var errReg = / invalid /
 				if (module.chunks && !errReg.test(link_cfg_str)) {
 					var link_cfg = JSON.parse(link_cfg_str.replace(/(^[\/\(]\*?)|([\*\)\/]{1,2}\/$)/g,''))
 					
-					var link = [currentOpts.cdn[link_cfg.type], link_cfg.name.toLowerCase(), link_cfg.version, link_cfg.name.toLowerCase() + link_cfg.ext + "." + link_cfg.type].join('/')
+					var link = [currentOpts.cdn[link_cfg.type], link_cfg.name, link_cfg.version, link_cfg.file + link_cfg.ext + "." + link_cfg.type].join('/')
 
 					module.chunks.forEach(function (chunk) {
 						if ( currentOpts.filter.length == 0 || currentOpts.filter.indexOf(chunk.name) == -1 || currentOpts.include.indexOf(chunk.name)) {
