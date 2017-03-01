@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-cdn-plugin",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "cdn in webpack",
   "main": "index.js",
   "scripts": {
